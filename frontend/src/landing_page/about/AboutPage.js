@@ -5,8 +5,8 @@ import Hero from './Hero';
 function AboutPage() {
     return (  
         <>
-            <Team/>
             <Hero/>
+            <Team/>
         </>
     );
 }
