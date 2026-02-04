@@ -1,19 +1,32 @@
-import React from 'react';
+import React from "react";
 
-function RightSection() {
-    return (
-        <div className="container mb-5">
-            <div className="row">
-                <div className="col-md-6">
-                    <img src="https://via.placeholder.com/500" alt="placeholder" className="img-fluid" />
-                </div>
-                <div className="col-md-6">
-                    <h2>Right Section</h2>
-                    <p>This is the right section of the products page.</p>
-                </div>
-            </div>
+function RightSection({
+  imageURL,
+  productName,
+  productDescription,
+  tryDemo,
+  learnMore,
+}) {
+  return (
+    <div className="container mb-5">
+      <div className="row">
+        
+        <div className="col-2"></div>
+        <div className="col-6 p-5 mt-5">
+          <h1>{productName}</h1>
+          <p>{productDescription}</p>
+          <div>
+            <a href={learnMore}>
+              Learn More
+            </a>
+          </div>
         </div>
-    );
+        <div className="col-4">
+          <img src={imageURL} alt={productName} />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default RightSection;
